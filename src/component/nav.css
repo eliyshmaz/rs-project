@@ -1,0 +1,242 @@
+.nav-bar {
+    position: relative;
+    margin-top: 45px;
+    padding: 0 3rem;
+    transition: 0.5s;
+    z-index: 9999;
+}
+
+.nav-bar.sticky-top {
+    position: sticky;
+    padding: 0;
+    z-index: 9999;
+}
+
+.navbar {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 5px;
+    transition: 0.5s;
+}
+
+.navbar .dropdown-toggle[aria-expanded=true]::after {
+    transform: rotate(-180deg);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    margin-right: 30px;
+    padding: 25px 0;
+    color: #000;
+    font-size: 15px;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+    .nav-bar {
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-light .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+.navbar-light .navbar-brand {
+    height: 75px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--dark);
+    font-weight: 500;
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu .callicon {
+        display: block;
+        top: 100%;
+        margin-top: 0;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        transform: rotateX(0deg);
+        visibility: visible;
+        transition: 0.5s;
+        opacity: 1;
+    }
+
+    .callicon {
+        border: 0px green solid;
+        border-radius: 10px;
+        font-size: 190%;
+        color: green;
+        padding-right: 20px;
+
+    }
+
+    .counter {
+        padding-left: 2px;
+        padding-right: 4px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 9px;
+        border-radius: 96px;
+        font-size: 12px;
+        background: #8ae068;
+        color: #fff;
+        padding: 0 4px;
+        vertical-align: top;
+        margin-left: -4px;
+    }
+}
+
+.icon {
+    padding: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF !important;
+    border-radius: 50px;
+    border: 1px dashed var(--primary) !important;
+}
+
+.printbtn {
+    font-size: 17px;
+    padding: 0.5em 2em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    background: #64a30a;
+    color: white;
+    border-radius: 4px;
+    margin-right: 2%;
+    margin-bottom: 10%;
+}
+
+.printbtn:hover {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgb(21, 255, 0) 0%, rgb(73, 202, 69) 100%);
+}
+
+.heartbtn:hover {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, #64a30a 0%, rgb(73, 202, 69) 100%);
+    color: #ffffff;
+    transition-duration: 1s;
+}
+
+.heartbtnOFF:hover {
+    color: #ffffff;
+    background: linear-gradient(90deg, rgb(230, 18, 18) 0%, rgb(255, 0, 0) 100%);
+    transition-duration: 1s;
+}
+
+.heartbtn {
+    font-size: 17px;
+    background-color: #64a30a;
+    padding: 0.5em 2em;
+    align-items: center;
+    margin-left: 18%;
+    color: #EEEEEE;
+
+
+}
+
+.heartbtnOFF {
+    background-color: rgb(117, 1, 1);
+    padding: 0.5em 2em;
+    align-items: center;
+    margin-left: 18%;
+    color: #EEEEEE;
+
+}
+
+.main-name {
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-right: 32px;
+}
+
+/* Example Media Queries */
+@media (max-width: 768px) {
+    .nav-bar {
+        padding: 0;
+    }
+
+    .main-name {
+        font-size: 1.2rem;
+    }
+
+    .callicon {
+        font-size: 1.5rem;
+        padding: 12px;
+        display: inline;
+    align-items: center;
+    color: green;
+    border: 0px solid gray;
+    font-size :     25px;
+
+    }
+
+    .navman.counter {
+        font-size: 0.8rem;
+        top: -10px;
+        right: -10px;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+}
+@media (max-width: 998px) {
+    .nav-bar {
+        padding: 0;
+    }
+
+    .main-name {
+        font-size: 1.2rem;
+    }
+
+    .callicon {
+        font-size: 1.5rem;
+        padding: 12px;
+        display: inline;
+    align-items: center;
+    color: green;
+    border: 0px solid gray;
+    font-size :     25px;
+
+    }
+
+    .navman.counter {
+        font-size: 0.8rem;
+        top: -10px;
+        right: -10px;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+}
+
